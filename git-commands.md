@@ -9,7 +9,7 @@ git add .						// Add all files to staging area
 git status						// Check Status of working tree
 git commit						// Commit chnages in index
 	git commit -m "changes"
-git push						// Push to remote repository (github)
+git push origin master						// Push to remote repository (github)
 git pull						// Pull latest from remote repository
 git clone						// Clone repository to a new directory
 
