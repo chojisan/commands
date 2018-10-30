@@ -1,4 +1,4 @@
-##Headers
+## Headers
 
 # H1
 ## H2
@@ -16,7 +16,7 @@ Alt-H2
 ------
 
 
-##Emphasis
+## Emphasis
 
 Emphasis, aka italics, with *asterisks* or _underscores_.
 
@@ -27,7 +27,7 @@ Combined emphasis with **asterisks and _underscores_**.
 Strikethrough uses two tildes. ~~Scratch this.~~
 
 
-##Lists
+## Lists
 
 (In this example, leading and trailing spaces are shown with with dots: ⋅)
 
@@ -49,7 +49,7 @@ Strikethrough uses two tildes. ~~Scratch this.~~
 + Or pluses
 
 
-##Links
+## Links
 
 There are two ways to create links.
 
@@ -75,7 +75,7 @@ Some text to show that the reference links can follow later.
 [1]: http://slashdot.org
 [link text itself]: http://www.reddit.com
 
-##Images
+## Images
 
 Here's our logo (hover to see the title text):
 
@@ -88,7 +88,7 @@ Reference-style:
 [logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 2"
 
 
-##Code and Syntax Highlighting
+## Code and Syntax Highlighting
 
 Code blocks are part of the Markdown spec, but syntax highlighting isn't. However, many renderers -- like Github's and Markdown Here -- support syntax highlighting. Which languages are supported and how those language names should be written will vary from renderer to renderer. Markdown Here supports highlighting for dozens of languages (and not-really-languages, like diffs and HTTP headers); to see the complete list, and how to write the language names, see the highlight.js demo page.
 
@@ -119,7 +119,7 @@ No language indicated, so no syntax highlighting in Markdown Here (varies on Git
 But let's throw in a <b>tag</b>.
 
 
-##Tables
+## Tables
 
 Tables aren't part of the core Markdown spec, but they are part of GFM and Markdown Here supports them. They are an easy way of adding tables to your email -- a task that would otherwise require copy-pasting from another application.
 
@@ -141,7 +141,7 @@ Markdown | Less | Pretty
 1 | 2 | 3
 
 
-##Blockquotes
+## Blockquotes
 
 > Blockquotes are very handy in email to emulate reply text.
 > This line is part of the same quote.
@@ -151,7 +151,7 @@ Quote break.
 > This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can *put* **Markdown** into a blockquote. 
 
 
-##Inline HTML
+## Inline HTML
 You can also use raw HTML in your Markdown, and it'll mostly work pretty well.
 
 <dl>
@@ -163,7 +163,7 @@ You can also use raw HTML in your Markdown, and it'll mostly work pretty well.
 </dl>
 
 
-##Horizontal Rule
+## Horizontal Rule
 Three or more...
 
 ---
@@ -179,7 +179,7 @@ ___
 Underscores
 
 
-##Line Breaks
+## Line Breaks
 My basic recommendation for learning how line breaks work is to experiment and discover -- hit <Enter> once (i.e., insert one newline), then hit it twice (i.e., insert two newlines), see what happens. You'll soon learn to get what you want. "Markdown Toggle" is your friend.
 
 Here are some things to try out:
@@ -192,7 +192,7 @@ This line is also a separate paragraph, but...
 This line is only separated by a single newline, so it's a separate line in the *same paragraph*.
 
 
-##ouTube Videos
+## YouTube Videos
 They can't be added directly but you can add an image with a link to the video like this:
 
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=YOUTUBE_VIDEO_ID_HERE
