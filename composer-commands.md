@@ -1,17 +1,31 @@
-## Composer Cheat Sheet for developers
+# Composer Cheat Sheet for developers
 
 Composer is the dependency manager for PHP and you are on a one-page-only documentation for this tool.
 Official documentation is on the official website, this page just brings you the essential.
 
-One line installer
+## One line installer
+
 curl -sS https://getcomposer.org/installer | php
+
 composer.phar most needed command line
+
+
 $ composer require vendor-name/package-name
+
+Adds required packages to your composer.json and installs them.
+The require command adds new packages to the composer.json file from the current directory.
+After adding/changing the requirements, the modified requirements will be installed or updated.
+
 $ composer install
+
+Parses the composer.json file and downloads the needed dependencies.
+
 $ composer update
 $ composer update --lock
 $ composer dump-autoload --optimize
-other commands
+
+### other commands
+
 $ composer about
 $ composer archive
 $ composer browse
@@ -37,7 +51,10 @@ $ composer show
 $ composer status
 $ composer suggests
 $ composer validate
-composer.json file
+
+
+### composer.json file
+
 {
     "name": "vendor-name/project-name",
     "description": "This is a very cool package!",
