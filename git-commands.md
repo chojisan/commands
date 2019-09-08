@@ -117,3 +117,17 @@ If you use checkout with a branch instead of a commit, HEAD is switched to the s
 
 git revert my_commit —Undo the effects of changes in my_commit. revert makes a new commit when it undoes the changes.
 revert is safe for collaborative projects because it doesn’t overwrite history that other users’ branches might depend upon.
+
+
+### Pull Request
+
+fork repo
+	git clone
+	git checkout -b “fix name”
+	fix
+	git status / git diff
+	git add
+	git commit
+	git push origin “fix name”
+	github page “compare and pull request”
+
