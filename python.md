@@ -2,6 +2,10 @@
 
 brew install python
 
+
+## easy install
+sudo python -m easy_install --upgrade pip
+
 ## install virtual environment
 
 sudo pip install virtualenv
@@ -11,6 +15,10 @@ sudo pip install virtualenv
 virtualenv myprojectenv
 
 virtualenv -p /usr/local/bin/python2.7 venv-django
+
+virtualenv --python=python3.5 venv_name
+
+python3 -m venv --without-pip webapp
 
 source myprojectenv/bin/activate
 
@@ -169,3 +177,61 @@ eCommerce
     http://satchless.com/
 
 CMS
+
+
+DJANGO
+        django-admin startproject
+            - https://wagtail.io/
+                wagtail_env
+                pip install wagtail
+                wagtail start mysite
+                python manage.py createsuperuser
+                python manage.py migrate
+                python manage.py runserver
+
+            - http://mezzanine.jupo.org/
+                mezz_env
+                pip install mezzanine
+                mezzanine-project myproject
+                python manage.py createdb
+                python manage.py runserver
+
+            - https://www.django-cms.org/en/
+                djangocms_env
+                pip install djangocms-installer
+                djangocms mysite
+                python manage.py runserver
+
+            - https://django-edge.readthedocs.io/en/latest/
+                https://github.com/arocks/edge
+                edge
+
+    WEB2PY
+        python web2py.py
+        python web2py.py -k myapp.key -c myapp.crt -i 0.0.0.0 -p 8082
+
+    WEB.PY
+        pip install web.py
+
+    PYRAMID
+        http://docs.pylonsproject.org/projects/pyramid/en/latest/narr/project.html
+        pip install pyramid
+        pcreate -s starter MyProject
+        pip install -e .
+        - running the test of application
+            pip install -e ".[testing]"
+            py.test -q
+        - running the project application
+            pserve development.ini
+
+    TURBOGEARS
+        http://www.turbogears.org/
+        pip install tg.devtools
+        gearbox quickstart example
+        cd example/
+        pip install -e .
+        gearbox serve
+
+    -SALEOR
+    -SHUUP
+    -TENSORFLOW
