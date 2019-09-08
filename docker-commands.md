@@ -129,3 +129,21 @@ docker exec -it web bash
 
 Print the last 100 lines of a container’s logs
 docker logs --tail 100 web
+
+Remove image
+docker rmi
+
+
+#### start docker container
+	sudo docker start ContainerName
+	# check running container
+	sudo docker ps
+	# create initial conatainer
+	sudo docker run --name dvwa --net=user_defined_nw --ip=192.168.10.2 -p 80:80 -d vulnerables/web-dvwa
+	#
+	docker run -d —name splunk -p 8000:8000 -e 'SPLUNK_START_ARGS=--accept-license' -e 'SPLUNK_PASSWORD=<password>' splunk/splunk:latest
+	# access container
+	sudo docker exec -it ContainerName bash
+
+	# run docker jupyter/scipy-notebook
+	docker run -p 8888:8888 jupyter/scipy-notebook
