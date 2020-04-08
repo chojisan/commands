@@ -1,0 +1,65 @@
+## PHP Archive (PHAR)
+The easiest way to obtain PHPUnit is to download a PHP Archive (PHAR) that has all required (as well as some optional) dependencies of PHPUnit bundled in a single file.
+
+The phar extension is required for using PHP Archives (PHAR).
+
+If the Suhosin extension is enabled, you need to allow execution of PHARs in your php.ini:
+
+suhosin.executor.include.whitelist = phar
+To globally install the PHAR:
+```
+$ wget https://phar.phpunit.de/phpunit-6.5.phar
+$ chmod +x phpunit-6.5.phar
+$ sudo mv phpunit-6.5.phar /usr/local/bin/phpunit
+$ phpunit --version
+PHPUnit x.y.z by Sebastian Bergmann and contributors.
+```
+You may also use the downloaded PHAR file directly:
+```
+$ wget https://phar.phpunit.de/phpunit-6.5.phar
+$ php phpunit-6.5.phar --version
+PHPUnit x.y.z by Sebastian Bergmann and contributors.
+```
+
+## Windows
+Globally installing the PHAR involves the same procedure as manually installing Composer on Windows:
+
+Create a directory for PHP binaries; e.g., C:\bin
+
+Append ;C:\bin to your PATH environment variable (related help)
+
+Download https://phar.phpunit.de/phpunit-6.5.phar and save the file as C:\bin\phpunit.phar
+
+Open a command line (e.g., press Windows+R » type cmd » ENTER)
+
+Create a wrapping batch script (results in C:\bin\phpunit.cmd):
+```
+C:\Users\username> cd C:\bin
+C:\bin> echo @php "%~dp0phpunit.phar" %* > phpunit.cmd
+C:\bin> exit
+```
+Open a new command line and confirm that you can execute PHPUnit from any path:
+```
+C:\Users\username> phpunit --version
+PHPUnit x.y.z by Sebastian Bergmann and contributors.
+```
+For Cygwin and/or MingW32 (e.g., TortoiseGit) shell environments, you may skip step 5. above, simply save the file as phpunit (without .phar extension), and make it executable via chmod 775 phpunit.
+
+
+## Fix: PHPUnit not working with Git Bash in Windows
+If you installed PHPUnit to a Windows machine, but are seeing something like this when running phpunit in Git Bash:
+```
+$ phpunit ––version
+bash: /c/bin/phpunit: No such file or directory
+```
+Then make a duplicate copy of your phpunit.phar file:
+```
+C:\bin\phpunit.phar
+```
+And rename the copy to:
+```
+C:\bin\phpunit
+```
+PHPUnit should work fine in Git Bash after that, as well as in Windows cmd or PowerShell.
+
+Note: If you don’t care about running it in Windows cmd or PowerShell, then just rename the original phpunit.phar file to phpunit rather than making a copy.
