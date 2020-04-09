@@ -38,8 +38,8 @@ function sanitize($input) {
 ?>
 ```
 
-
-# PHP
+# A guide to preventing SQL injection
+## PHP
 PHP is a little more disorganized than how Perl handles parameters. The standard MySQL extension doesn't support parameterization, but that extension has been out of date for more than five years and you should definitely use one of the alternatives instead. The PostgreSQL extension does:
 ```
 $result = pg_query_params( $dbh, 'SELECT * FROM users WHERE email = $1', array($email) );
