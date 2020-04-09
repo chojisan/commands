@@ -1,6 +1,7 @@
 ## Function for stripping out malicious bits
 
-`<?php
+```
+<?php
 function cleanInput($input) {
  
   $search = array(
@@ -13,10 +14,12 @@ function cleanInput($input) {
     $output = preg_replace($search, '', $input);
     return $output;
   }
-?>`
+?>
+```
 
 ## Sanitization function
-`<?php
+```
+<?php
 function sanitize($input) {
     if (is_array($input)) {
         foreach($input as $var=>$val) {
@@ -32,10 +35,12 @@ function sanitize($input) {
     }
     return $output;
 }
-?>`
+?>
+```
 
 ## Usage
-`<?php
+```
+<?php
   $bad_string = "Hi! <script src='http://www.evilsite.com/bad_script.js'></script> It's a good day!";
   $good_string = sanitize($bad_string);
   // $good_string returns "Hi! It\'s a good day!"
@@ -43,4 +48,5 @@ function sanitize($input) {
   // Also use for getting POST/GET variables
   $_POST = sanitize($_POST);
   $_GET  = sanitize($_GET);
-?>`
+?>
+```
