@@ -78,7 +78,7 @@ $sth = $dbh->prepare('SELECT * FROM users WHERE email = :email');
 $sth->execute(array(':email' => $email));
 ```
 
-Using the PDO layer
+## Using the PDO layer
 Here's the long way to do bind parameters.
 ```
 $dbh = new PDO('mysql:dbname=testdb;host=127.0.0.1', $user, $password);
